@@ -3,6 +3,7 @@ displayCalculation();
 
 function addToCalculation (value) {
   calculation = calculation + value;
+  if (calculation.length >= 30) return;
   localStorage.setItem('calculation', JSON.stringify(calculation));
   displayCalculation();
 }

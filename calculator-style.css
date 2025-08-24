@@ -38,6 +38,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .buttons-box {
