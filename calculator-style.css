@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-image: url('graphic/background.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.calculator-body {
+  grid-gap: 10px;
+  width: 90%;
+  min-width: 300px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  border: 10px inset  #424090da;
+  box-shadow: 3px 3px 25px #493e76;
+  background-color: rgb(57, 57, 70);
+}
+
+.display-box {
+  grid-column: span 3;
+  margin-bottom: 20px;
+}
+.calculator-display-screen {
+  text-align: right;
+  font-size: calc(16px + 1vw);
+  padding: 10px;
+  background-color: rgb(121, 118, 134);
+  border-radius: 10px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.buttons-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 60px);
+  gap: 10px;
+
+  grid-template-areas:
+    "left-paren right-paren reset reset"
+    "seven     eight     nine   divide"
+    "four      five      six    multiply"
+    "one       two       three  minus"
+    "zero      zero      dot    plus"
+    "equal     equal     equal  equal";
+}
+
+/* Assign buttons to areas */
+.left-paren { grid-area: left-paren; }
+.right-paren { grid-area: right-paren; }
+.reset { grid-area: reset; }
+
+.one { grid-area: one; }
+.two { grid-area: two; }
+.three { grid-area: three; }
+.four { grid-area: four; }
+.five { grid-area: five; }
+.six { grid-area: six; }
+.seven { grid-area: seven; }
+.eight { grid-area: eight; }
+.nine { grid-area: nine; }
+.zero { grid-area: zero; }
+
+.plus { grid-area: plus; }
+.minus { grid-area: minus; }
+.multiply { grid-area: multiply; }
+.divide { grid-area: divide; }
+
+.dot { grid-area: dot; }
+.equal { grid-area: equal; }
+
+.number-button {
+  background-color: #a7adec;
+  color: black;
+  border-radius: 50px;
+  border: none;
+  padding: 20px;
+  font-size: 1.5rem;  
+}
+
+.number-button:hover, .action-button:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.action-button {
+  background-color: #4a48a6;
+  color: black;
+  border-radius: 50px;
+  border: none;
+  padding: 20px;
+  font-size: 1.5rem;
+}
