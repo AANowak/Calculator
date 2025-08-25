@@ -55,5 +55,6 @@ document.addEventListener("keydown", (event) => {
   else if (key === ".") addToCalculation(".");
   else if (key === "Enter" || event.code === "NumpadEnter") evaluateCalculation();
   else if (key === "(" || key === ")") addToCalculation(key);
-  else if (key === "Backspace") resetCalculation();
+  else if (key === "Backspace") backspace();
+  else if (key === "Delete") resetCalculation();
 });
