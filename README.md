@@ -8,7 +8,7 @@ This project is part of my learning journey and portfolio — created to practic
 ## Features  
 - Basic arithmetic: `+`, `-`, `*`, `/`  
 - Parentheses `(` `)` support
-- Implied multipliccation with `( )`  
+- Implied multiplication with `( )`  
 - Decimal numbers `.`
 - Display box overflow protection
 - Backspace & reset functions  
@@ -24,7 +24,7 @@ This project is part of my learning journey and portfolio — created to practic
 ---
 
 ## Preview  
-![Calculator Screenshot](screenshot.png) 
+![Calculator Screenshot](graphic/preview.png) 
 
 ---
 
@@ -36,12 +36,13 @@ This project is part of my learning journey and portfolio — created to practic
 ---
 
 ## Lessons Learned  
-- Handling dynamic input and `eval()` carefully  
+- Handling dynamic input and `eval()` carefully
+- Using RegExp for the first time
 - Making a UI responsive with min/max width
 - CSS Grid-Template-Areas used for full control of grid placements  
 - Adding keyboard event listeners for better UX
 - First project published on Github Pages!
-- Avoiding cache issues on GitHub Pages (cache-busting trick)  
+- Avoiding cache issues on GitHub Pages (cache-busting trick with ?v=1.0)  
 
 ---
 
