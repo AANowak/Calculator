@@ -8,20 +8,36 @@ function addToCalculation (value) {
   displayCalculation();
 }
 
+// Preprocess calculation to handle implicit multiplication
+function preprocessCalculation(calc) {
+  // number followed by ( → multiply
+  calc = calc.replace(/(\d)\(/g, '$1*(');
+  // ) followed by number → multiply
+  calc = calc.replace(/\)(\d)/g, ')*$1');
+  // ) followed by ( → multiply
+  calc = calc.replace(/\)\(/g, ')*(');
+  return calc;
+}
+
 function displayCalculation() {
-  document.querySelector('.js-calculator-display')
-    .innerHTML = calculation;
+  const display = document.querySelector('.js-calculator-display');
+  display.innerHTML = calculation || '0';  
 }
 
 function resetCalculation() {
   calculation = '';
+  localStorage.setItem('calculation', JSON.stringify(calculation));
  displayCalculation();
 }
 
 function evaluateCalculation() {
-  eval(calculation);
-  calculation = eval(calculation);
-  displayCalculation();
+  try {
+    const processed = preprocessCalculation(calculation);
+    calculation = eval(processed);
+    displayCalculation();
+  } catch (e) {
+    alert("Invalid calculation!");
+  }
 }
 
 
