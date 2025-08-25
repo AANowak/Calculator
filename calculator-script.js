@@ -30,6 +30,12 @@ function resetCalculation() {
  displayCalculation();
 }
 
+function backspace() {
+  calculation = calculation.slice(0, -1);
+  localStorage.setItem('calculation', JSON.stringify(calculation));
+  displayCalculation();
+}
+
 function evaluateCalculation() {
   try {
     const processed = preprocessCalculation(calculation);

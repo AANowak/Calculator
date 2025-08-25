@@ -50,7 +50,7 @@ body {
   gap: 10px;
 
   grid-template-areas:
-    "left-paren right-paren reset reset"
+    "left-paren right-paren delete reset"
     "seven     eight     nine   divide"
     "four      five      six    multiply"
     "one       two       three  minus"
@@ -62,6 +62,7 @@ body {
 .left-paren { grid-area: left-paren; }
 .right-paren { grid-area: right-paren; }
 .reset { grid-area: reset; }
+.delete {grid-area: delete;}
 
 .one { grid-area: one; }
 .two { grid-area: two; }
